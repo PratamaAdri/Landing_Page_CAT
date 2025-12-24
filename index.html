@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal CAT BKN</title>
+
+  <!-- STYLE UTAMA -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- DATATABLE CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css">
 </head>
 <body>
 
@@ -22,21 +27,17 @@
         <a href="#">Galeri</a>
         <a href="#">Contact</a>
 
-        <!-- DROPDOWN -->
-  <div class="nav-dropdown">
-  <button class="dropdown-toggle">
-    Lainnya <span class="dropdown-icon">▾</span>
-  </button>
-
-  <div class="dropdown-menu">
-    <a href="#">Pengumuman</a>
-    <a href="#">Jadwal Seleksi</a>
-    <a href="#">FAQ</a>
-    <a href="#">Kontak Helpdesk</a>
-  </div>
-</div>
-
-
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle">
+            Lainnya <span class="dropdown-icon">▾</span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Pengumuman</a>
+            <a href="#">Jadwal Seleksi</a>
+            <a href="#">FAQ</a>
+            <a href="#">Kontak Helpdesk</a>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -44,51 +45,78 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-    <div class="hero-content">
-      <h1>Selamat Datang di Portal CAT BKN</h1>
-      <p>Computer Assisted Test Badan Kepegawaian Negara</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <a href="#" class="hero-btn">
-        <span class="play-icon">▶</span>
-        <span class="btn-text">Tata Tertib Pelaksanaan Seleksi CAT BKN</span>
-    </a>
-    </div>
+      <div class="hero-content">
+        <h1>Selamat Datang di Portal CAT BKN</h1>
+        <p>Computer Assisted Test Badan Kepegawaian Negara</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+        </p>
+        <a href="#" class="hero-btn">
+          <span class="play-icon">▶</span>
+          <span class="btn-text">Tata Tertib Pelaksanaan Seleksi CAT BKN</span>
+        </a>
+      </div>
     </div>
   </section>
 
 </section>
 
+<section class="section section-datatable">
+  <div class="datatable-layer">
 
-<!-- TABLE CAT -->
-<section class="section">
-  <h2>Pelaksanaan Seleksi CAT Terkini</h2>
-  <div class="table-wrapper">
-    <table>
-      <thead>
-        <tr>
-          <th>No</th>
-          <th>Kode</th>
-          <th>Deskripsi</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>CAT-001</td>
-          <td>Seleksi CPNS</td>
-          <td class="active">Aktif</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>CAT-002</td>
-          <td>Seleksi PPPK</td>
-          <td class="active">Aktif</td>
-        </tr>
-      </tbody>
-    </table>
+    <h2 class="section-title">Pelaksanaan Seleksi CAT Terkini</h2>
+
+    <div class="table-wrapper">
+      <table id="catTable" class="display">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Kode</th>
+            <th>Deskripsi</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>CAT-001</td>
+            <td>Seleksi CPNS</td>
+            <td class="active">Aktif</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>CAT-002</td>
+            <td>Seleksi PPPK</td>
+            <td class="active">Aktif</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>CAT-003</td>
+            <td>Seleksi Sekolah Kedinasan</td>
+            <td class="active">Aktif</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>CAT-003</td>
+            <td>Seleksi Sekolah Kedinasan</td>
+            <td class="active">Aktif</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>CAT-003</td>
+            <td>Seleksi Sekolah Kedinasan</td>
+            <td class="active">Aktif</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>CAT-003</td>
+            <td>Seleksi Sekolah Kedinasan</td>
+            <td class="active">Aktif</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 </section>
 
@@ -148,7 +176,7 @@
   </blockquote>
 </section>
 
-<!-- CONTACT -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <h3>Contact Us</h3>  
@@ -161,6 +189,36 @@
     </p>
   </div>
 </footer>
+
+<!-- ================= SCRIPT ================= -->
+
+<!-- JQUERY -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- DATATABLE JS -->
+<script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+
+<!-- INIT DATATABLE -->
+<script>
+  $(document).ready(function () {
+    $('#catTable').DataTable({
+      pageLength: 10,
+      lengthMenu: [5, 10, 25, 50],
+      ordering: true,
+      searching: true,
+      info: true,
+      language: {
+        search: "Search",
+        lengthMenu: "Show _MENU_",
+        info: "Showing _START_ to _END_ of _TOTAL_ entries",
+        paginate: {
+          previous: "‹",
+          next: "›"
+        }
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
