@@ -315,13 +315,181 @@ th, td {
   border-radius: 10px;
 }
 
+/* SECTION FOOTER */
+.section-footer {
+  background: #2b5688;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+}
+
 /* FOOTER */
 .footer {
-  background: #0b3c6d;
-  color: white;
-  padding: 40px 10%;
-  text-align: center;
+  color: #fff;
+  padding: 50px 8% 40px;
+  width: 100%;
 }
+
+.footer-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+}
+
+/* MAP */
+.footer-map {
+  flex: 1;
+  max-width: 380px;
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  border-radius: 18px;
+  /* background: #c9f3ff; */
+  padding: 6px;
+}
+
+/* CONTACT */
+.footer-contact {
+  flex: 1.2;
+}
+
+.footer-contact h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.footer-contact h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.contact-list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* SOCIAL */
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social a {
+  width: 38px;
+  height: 38px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.footer-social a:hover {
+  background: #1e5fa3;
+  transform: translateY(-2px);
+}
+
+/* BASE */
+.footer-social .social {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+/* HOVER BRAND COLORS */
+.footer-social .web:hover {
+  background: #0b3c6d;
+}
+
+.footer-social .facebook:hover {
+  background: #1877f2;
+}
+
+.footer-social .instagram:hover {
+  background: linear-gradient(
+    45deg,
+    #f58529,
+    #dd2a7b,
+    #8134af,
+    #515bd4
+  );
+}
+
+.footer-social .twitter:hover {
+  background: #000000;
+}
+
+.footer-social .youtube:hover {
+  background: #ff0000;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+  width: 100%;
+  background: #1f456f;
+  color: #fff;
+
+  text-align: center;
+  font-size: 13px;
+  padding: 14px 10px;
+}
+/*  RESPONSIVE FOOTER */
+@media (max-width: 768px) {
+  .section-footer {
+    min-height: unset;
+  }
+
+  .footer {
+    padding: 40px 6% 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-map {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .footer-map iframe {
+    height: 240px;
+  }
+
+  .footer-contact {
+    width: 100%;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-social a {
+    margin: 6px;
+  }
+}
+
+
 
 @media (max-width: 768px) {
   .navbar {
